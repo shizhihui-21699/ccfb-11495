@@ -1,0 +1,25 @@
+{
+  "name": "stix-ioc-scan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "STIX 2.1 indicator IOC matching engine with multi-process log scanning",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "bin": {
+    "iocscan": "./src/cli.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-reporter=spec 'tests/*.test.ts'",
+    "bench": "node bench/bench.ts",
+    "gen:intel": "node src/cli.ts gen-intel",
+    "gen:logs": "node src/cli.ts gen-logs",
+    "scan": "node src/cli.ts scan"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
