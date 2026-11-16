@@ -1,0 +1,27 @@
+{
+  "name": "ioc-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run build && node --test dist/test/",
+    "build": "tsc -p tsconfig.json",
+    "scan": "node dist/src/cli.js scan",
+    "gen-intel": "node dist/src/cli.js gen-intel",
+    "gen-logs": "node dist/src/cli.js gen-logs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  },
+  "bin": {
+    "ioc-engine": "dist/src/cli.js"
+  }
+}
